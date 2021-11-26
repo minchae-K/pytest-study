@@ -1,8 +1,21 @@
 from calc import Calc
 
-def test_add_two_numbers():
+import pytest
+
+@pytest.fixture
+def calc():
 	c = Calc()
+	return c
+
+def test_add_two_numbers(calc):
+	#c = Calc()
 	#res = c.add(4,5) #add의 입력 인수가 3개로 변경되었기 때문에 error 발생
-	res = c.add(4,5,6)
+	res = calc.add(4,5,6)
 	
 	assert res == 15
+
+def test_sub_two_numbers(calc):
+	#c = Calc()
+	res = calc.sub(5,1)
+
+	assert res == 3
