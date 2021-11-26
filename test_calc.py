@@ -26,3 +26,8 @@ def test_mul_by_zero_raises_exception(calc):
 	
 	with pytest.raises(ValueError): #ValueError가 발생하기를 바라는 code
 		calc.mul(3,0) #0이 입력되었기 때문에 ValueError가 발생하는 것
+
+def test_avg_correct_averate(calc):
+	res = calc.avg([2, 5, 12, 98])
+
+	assert res == 29.25

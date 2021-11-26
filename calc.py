@@ -18,3 +18,6 @@ class Calc:
 			raise ValueError
 		return reduce(lambda x, y: x*y, args)
 
+	def avg(self, it):
+		return sum(it)/len(it)
+
