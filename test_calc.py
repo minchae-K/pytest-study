@@ -1,6 +1,6 @@
 #from calc import Calc
 
-#import pytest
+import pytest
 
 # @pytest.fixture
 # def calc():
@@ -21,3 +21,8 @@ def test_sub_two_numbers(calc):
 	res = calc.sub(5,1)
 
 	assert res == 3
+
+def test_mul_by_zero_raises_exception(calc):
+	
+	with pytest.raises(ValueError): #ValueError가 발생하기를 바라는 code
+		calc.mul(3,0) #0이 입력되었기 때문에 ValueError가 발생하는 것
