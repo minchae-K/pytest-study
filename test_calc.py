@@ -1,11 +1,13 @@
-from calc import Calc
+#from calc import Calc
 
-import pytest
+#import pytest
 
-@pytest.fixture
-def calc():
-	c = Calc()
-	return c
+# @pytest.fixture
+# def calc():
+#	c = Calc()
+#	return c
+
+#conftest.py에서 이미 설정해두었기 때문에 별도의 선언 없이 진행이 가능함
 
 def test_add_two_numbers(calc):
 	#c = Calc()
