@@ -31,3 +31,8 @@ def test_avg_correct_averate(calc):
 	res = calc.avg([2, 5, 12, 98])
 
 	assert res == 29.25
+
+def test_avg_removes_upper_outliers(calc):
+	res = calc.avg([2, 5, 12, 98], ut=90) #ut : upper threshold parameter
+
+	assert res == pytest.approx(6.333333) #값이 무한대로 되기 때문에 pytest의 approx사용
